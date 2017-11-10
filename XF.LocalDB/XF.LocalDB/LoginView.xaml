@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:XF.LocalDB.ViewMode"
+             x:Class="XF.LocalDB.LoginView">
+    <ContentPage.BindingContext>
+        <vm:LoginViewModel></vm:LoginViewModel>
+    </ContentPage.BindingContext>
+
+    <StackLayout VerticalOptions="Center" Margin="64">
+        <Entry Placeholder="Usuário" x:Name="txtUsuario" Text="{Binding Usuario}" Keyboard="Email"></Entry>
+        <Entry Placeholder="Senha" x:Name="txtSenha" IsPassword="True" Text="{Binding Senha}"></Entry>
+        <Button x:Name="btnEntrar" Text="Entrar" Command="{Binding EntrarCommand}"></Button>
+    </StackLayout>
+</ContentPage>
