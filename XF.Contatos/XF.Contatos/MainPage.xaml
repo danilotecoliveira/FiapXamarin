@@ -5,9 +5,9 @@
              x:Class="XF.Contatos.MainPage">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Button Text="Lista de Contatos" Clicked="Button_Clicked"></Button>
+            <Button Text="Tirar Foto" Clicked="Button_Clicked_1"></Button>
+            <Button Text="Ver Mapa" Clicked="Button_Clicked_2"></Button>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Xamarin.Forms;
+﻿using Xamarin.Forms;
+using XF.Contatos.View;
 
 namespace XF.Contatos
 {
@@ -12,6 +8,21 @@ namespace XF.Contatos
         public MainPage()
         {
             InitializeComponent();
+        }
+
+        private void Button_Clicked(object sender, System.EventArgs e)
+        {
+            Navigation.PushAsync(new ContatosView());
+        }
+
+        private void Button_Clicked_1(object sender, System.EventArgs e)
+        {
+            Navigation.PushAsync(new FotoView());
+        }
+
+        private void Button_Clicked_2(object sender, System.EventArgs e)
+        {
+            Navigation.PushAsync(new MapaView());
         }
     }
 }

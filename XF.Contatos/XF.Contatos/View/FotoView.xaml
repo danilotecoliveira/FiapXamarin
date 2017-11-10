@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XF.Contatos.View.FotoView">
+    <ContentPage.Content>
+        <StackLayout>
+            <Image Source="avatar.jpg"></Image>
+            <Button Text="Tirar" Image="camera.svg"></Button>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="-132265421354"></Label>
+                <Button Text="Ver no Mapa"></Button>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
