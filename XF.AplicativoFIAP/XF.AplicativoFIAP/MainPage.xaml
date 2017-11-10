@@ -4,10 +4,24 @@
              xmlns:local="clr-namespace:XF.AplicativoFIAP"
              x:Class="XF.AplicativoFIAP.MainPage">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+        <StackLayout Padding="10">
+
+            <StackLayout x:Name="layPesquisa" Grid.Row="0" Padding="5">
+                <SearchBar Placeholder="Pesquisar por nome" Text="{Binding PesquisaPorNome}" />
+            </StackLayout>
+
+            <ListView ItemsSource="{Binding Professores}" SelectedItem="{Binding Selecionado, Mode=TwoWay}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ViewCell.View>
+                                <Label Text="{Binding Nome}" VerticalTextAlignment="Center"></Label>
+                            </ViewCell.View>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <Button VerticalOptions="EndAndExpand" Text="Novo Professor" Command="{Binding NovoProfessor}"></Button>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
